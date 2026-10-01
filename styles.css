@@ -1,0 +1,260 @@
+:root {
+  --page-bg: #f3f7fb;
+  --panel-bg: #ffffff;
+  --panel-border: #d9e3f0;
+  --text: #1a2433;
+  --muted: #4b5d75;
+  --accent: #1b6dc1;
+  --accent-soft: #eaf3ff;
+  --shadow: rgba(18, 34, 54, 0.08);
+  --ground: #2d5b3d;
+  --ground-line: #5a7d5d;
+  --projectile: #ef5350;
+  --trajectory: #1b6dc1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--page-bg);
+  color: var(--text);
+}
+
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px 80px;
+}
+
+.panel {
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 16px;
+  box-shadow: 0 10px 24px var(--shadow);
+  padding: 32px;
+}
+
+.app-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 1.1fr) minmax(320px, 1.4fr);
+  gap: 24px;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+dl,
+label,
+button {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 12px;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.eyebrow {
+  color: var(--accent);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+}
+
+.intro {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+.assumptions,
+.equations {
+  margin: 0 0 24px;
+  padding-left: 1.2rem;
+  line-height: 1.7;
+}
+
+.equation-item {
+  margin-bottom: 18px;
+}
+
+.equation {
+  background: var(--accent-soft);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-weight: 700;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.equation-note {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.metrics div {
+  background: #f8fafc;
+  border: 1px solid var(--panel-border);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+.metrics dt {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+}
+
+.metrics dd {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.teacher-note,
+.trajectory-summary {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.sim-panel {
+  background: #f8fbff;
+  border: 1px solid var(--panel-border);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.control-panel {
+  display: grid;
+  gap: 18px;
+}
+
+.slider-row {
+  display: grid;
+  gap: 8px;
+}
+
+.slider-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.slider-header label {
+  font-weight: 700;
+}
+
+.slider-value {
+  min-width: 90px;
+  text-align: right;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: var(--accent);
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+button {
+  border: none;
+  border-radius: 999px;
+  padding: 10px 18px;
+  font-size: 0.96rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.primary-button {
+  background: var(--accent);
+  color: white;
+}
+
+.secondary-button {
+  background: #e9eef7;
+  color: var(--text);
+}
+
+.ghost-button {
+  background: transparent;
+  border: 1px solid var(--panel-border);
+  color: var(--text);
+}
+
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(120px, 1fr));
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.metric-card {
+  background: white;
+  border: 1px solid var(--panel-border);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.metric-card span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.74rem;
+  margin-bottom: 6px;
+}
+
+.metric-card strong {
+  font-size: 1rem;
+}
+
+.canvas-shell {
+  margin-top: 20px;
+  background: linear-gradient(180deg, #edf8ff 0%, #ffffff 100%);
+  border: 1px solid var(--panel-border);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  background: transparent;
+}
+
+@media (max-width: 900px) {
+  .app-grid {
+    grid-template-columns: 1fr;
+  }
+}

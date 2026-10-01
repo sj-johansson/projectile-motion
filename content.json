@@ -1,0 +1,80 @@
+{
+  "title": "Ideal kastbana",
+  "subtitle": "Gymnasiefysik",
+  "intro": "En ideal projektil rör sig under påverkan av tyngdkraften endast. Det innebär att vi bortser från luftmotstånd och antar att start- och landningshöjd är lika.",
+  "assumptions": [
+    "Konstant gravitation: g = 9,81 m/s²",
+    "Inget luftmotstånd",
+    "Samma höjd vid start och landning",
+    "Rörelsen sker i två dimensioner",
+    "Längs x-axeln är hastigheten konstant och längs y-axeln är accelerationen konstant"
+  ],
+  "equations": [
+    {
+      "name": "Horisontell läge",
+      "equation": "x(t) = v₀ cos(θ) · t",
+      "unit": "meter",
+      "explanation": "Horisontell position som funktion av tiden. Eftersom det inte finns något horisontellt motstånd är vx konstant."
+    },
+    {
+      "name": "Vertikalt läge",
+      "equation": "y(t) = v₀ sin(θ) · t - 1/2 · g · t²",
+      "unit": "meter",
+      "explanation": "Vertikal position som funktion av tiden. Tyngdkraften ger en konstant acceleration nedåt."
+    },
+    {
+      "name": "Flygtid",
+      "equation": "T = 2v₀ sin(θ) / g",
+      "unit": "sekunder",
+      "explanation": "Tid från start till återkomst till samma höjd. Detta gäller endast om start- och landningshöjden är lika."
+    },
+    {
+      "name": "Räckvidd",
+      "equation": "R = v₀² sin(2θ) / g",
+      "unit": "meter",
+      "explanation": "Den horisontella sträckan under hela flygningen. Maximalt värde uppnås vid 45° om v₀ är konstant."
+    },
+    {
+      "name": "Maxhöjd",
+      "equation": "H = (v₀² sin²(θ)) / (2g)",
+      "unit": "meter",
+      "explanation": "Högsta punkten i banan där den vertikala hastigheten är noll i ett ögonblick."
+    }
+  ],
+  "labels": {
+    "velocity": "Startfart",
+    "angle": "Utslagsvinkel",
+    "gravity": "Tyngdacceleration",
+    "time": "Tid",
+    "horizontalAxis": "Horisontell sträcka",
+    "verticalAxis": "Höjd över marken",
+    "flightTime": "Flygtid",
+    "range": "Räckvidd",
+    "maxHeight": "Maxhöjd",
+    "launchPoint": "Startpunkt",
+    "landingPoint": "Landningspunkt"
+  },
+  "example": {
+    "title": "Exempel",
+    "description": "Ett kast med v₀ = 20 m/s och θ = 45° ger en symmetrisk bana förutsatt att start- och landningshöjden är lika.",
+    "values": {
+      "initialSpeed": 20,
+      "angleDegrees": 45
+    }
+  },
+  "teacherNote": "I denna modell används SI-enheter och endast gravitationen som kraft. Därför är och uppstår inga skillnader mellan luftmotstånd och verkliga förhållanden i en idealiserad modell.",
+  "ui": {
+    "start": "Start",
+    "pause": "Paus",
+    "reset": "Återställ",
+    "elapsedTime": "Förfluten tid",
+    "position": "Position",
+    "range": "Räckvidd",
+    "trajectory": "Projicering av banan",
+    "controls": "Inställningar",
+    "summary": "Rörelseinformation",
+    "ground": "Marknivå",
+    "startPoint": "Startpunkt",
+    "landingPoint": "Landningspunkt"
+  }
+}
