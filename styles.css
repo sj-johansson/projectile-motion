@@ -1,16 +1,16 @@
 :root {
-  --page-bg: #f3f7fb;
+  --page-bg: #ffffff;
   --panel-bg: #ffffff;
-  --panel-border: #d9e3f0;
-  --text: #1a2433;
-  --muted: #4b5d75;
-  --accent: #1b6dc1;
-  --accent-soft: #eaf3ff;
-  --shadow: rgba(18, 34, 54, 0.08);
-  --ground: #2d5b3d;
-  --ground-line: #5a7d5d;
-  --projectile: #ef5350;
-  --trajectory: #1b6dc1;
+  --panel-border: #e5e7eb;
+  --text: #111827;
+  --muted: #4b5563;
+  --accent: #2563eb;
+  --accent-soft: #eff6ff;
+  --shadow: rgba(17, 24, 39, 0.06);
+  --ground: #2f6f4f;
+  --ground-line: #7aa287;
+  --projectile: #ef4444;
+  --trajectory: #2563eb;
 }
 
 * {
@@ -107,7 +107,7 @@ h1 {
 }
 
 .metrics div {
-  background: #f8fafc;
+  background: #f9fafb;
   border: 1px solid var(--panel-border);
   border-radius: 10px;
   padding: 12px 14px;
@@ -132,7 +132,7 @@ h1 {
 }
 
 .sim-panel {
-  background: #f8fbff;
+  background: #ffffff;
   border: 1px solid var(--panel-border);
   border-radius: 16px;
   padding: 20px;
@@ -202,7 +202,7 @@ button:active {
 }
 
 .secondary-button {
-  background: #e9eef7;
+  background: #f3f4f6;
   color: var(--text);
 }
 
@@ -239,7 +239,7 @@ button:active {
 
 .canvas-shell {
   margin-top: 20px;
-  background: linear-gradient(180deg, #edf8ff 0%, #ffffff 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
   border: 1px solid var(--panel-border);
   border-radius: 14px;
   overflow: hidden;
