@@ -1,7 +1,7 @@
 {
   "title": "Ideal kastbana",
   "subtitle": "Gymnasiefysik",
-  "intro": "En ideal projektil rör sig under påverkan av tyngdkraften endast. Det innebär att vi bortser från luftmotstånd och antar att start- och landningshöjd är lika.",
+  "intro": "En ideell projektil rör sig under påverkan av tyngdkraften endast. Det innebär att vi bortser från luftmotstånd och antar att start- och landningshöjd är lika.",
   "assumptions": [
     "Konstant gravitation: g = 9,81 m/s²",
     "Inget luftmotstånd",
